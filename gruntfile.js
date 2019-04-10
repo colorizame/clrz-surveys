@@ -138,7 +138,7 @@ module.exports = function(grunt) {
 			dev: {
 				script: 'server.js',
 				options: {
-					nodeArgs: ['--debug'],
+					nodeArgs: ['--inspect'],
 					ext: 'js,html',
 					watch: watchFiles.serverViews.concat(watchFiles.serverJS)
 				}
@@ -329,7 +329,7 @@ module.exports = function(grunt) {
     grunt.registerTask('coverage:server', ['env:test', 'mocha_istanbul:coverageServer']);
 
 	// Default task(s).
-	grunt.registerTask('default', ['lint', 'loadConfig', 'ngAnnotate', 'uglify', 'html2js:main', 'html2js:forms', 'env', 'concurrent:default']);
+	grunt.registerTask('default', ['loadConfig', 'ngAnnotate', 'uglify', 'html2js:main', 'html2js:forms', 'env', 'concurrent:default']);
 	grunt.registerTask('dev', ['lint', 'html2js:main',  'html2js:forms', 'env:dev', 'concurrent:default']);
 
 	// Debug task.

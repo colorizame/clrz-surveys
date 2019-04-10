@@ -1,13 +1,17 @@
 'use strict';
 
+var imported = document.createElement('script');
+imported.src = 'https://cdn.jsdelivr.net/npm/jsep@0.3.4/build/jsep.min.js';
+document.head.appendChild(imported);
+
 //FIXME: Should find an appropriate place for this
 //Setting up jsep
-jsep.addBinaryOp('contains', 10);
-jsep.addBinaryOp('!contains', 10);
-jsep.addBinaryOp('begins', 10);
-jsep.addBinaryOp('!begins', 10);
-jsep.addBinaryOp('ends', 10);
-jsep.addBinaryOp('!ends', 10);
+// jsep.addBinaryOp('contains', 10);
+// jsep.addBinaryOp('!contains', 10);
+// jsep.addBinaryOp('begins', 10);
+// jsep.addBinaryOp('!begins', 10);
+// jsep.addBinaryOp('ends', 10);
+// jsep.addBinaryOp('!ends', 10);
 
 angular.module('view-form').directive('submitFormDirective', ['$http', 'TimeCounter', '$filter', '$rootScope', 'SendVisitorData', '$translate', '$timeout',
     function ($http, TimeCounter, $filter, $rootScope, SendVisitorData, $translate, $timeout) {
